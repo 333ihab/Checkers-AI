@@ -1,0 +1,6 @@
+# Optional requirements for the Advanced GUI with analytics charts
+# The standard GUI (CheckersGUI.py) works with just Tkinter (included in Python)
+
+# For Advanced GUI with charts (CheckersGUI_Advanced.py):
+matplotlib>=3.5.0
+
