@@ -35,7 +35,6 @@ class GameBoard:
     """
 
     BOARD_SIZE = 8
-
     def __init__(self, board: Optional[List[List[Optional[str]]]] = None,
                  player_to_move: str = 'w'):
         """
@@ -55,8 +54,7 @@ class GameBoard:
         """
         Create the standard checkers starting position: 3 rows of black on top, 3 rows of white on bottom.
         Playable squares are those with (r+c)%2==1.
-        
-        Returns:
+          Returns:
             List[List[Optional[str]]]: Initial board configuration
         """
         B = [[None for _ in range(self.BOARD_SIZE)] for __ in range(self.BOARD_SIZE)]

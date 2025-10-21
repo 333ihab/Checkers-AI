@@ -62,3 +62,4 @@ class OtherStuff:
         """
         return 'b' if player == 'w' else 'w'
 
+

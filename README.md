@@ -2,17 +2,17 @@
 
 A Python implementation of a Checkers game with an AI bot that uses various search strategies to play against a human player.
 
-## ✨ Features
+## Features
 
-- 🎮 **Multiple Interfaces**: Choose between command-line or beautiful graphical interfaces
-- 🤖 **Three AI Strategies**: Minimax, Alpha-Beta Pruning, and Alpha-Beta with Ordering
-- 📊 **Real-Time Analytics**: Track nodes expanded, generated, pruned, and time usage
-- 🎯 **Configurable Difficulty**: Adjust time limits (1-3s) and search depth (5-9 plies)
-- 👑 **Full Checkers Rules**: King promotion, forced captures, and multiple jumps
-- 📈 **Performance Charts**: Visual analytics with matplotlib (Advanced GUI)
-- 🎨 **Modern UI**: Beautiful dark theme with intuitive controls
-- 📜 **Move History**: Track and review all moves during the game
-- 🏆 **Game Statistics**: Comprehensive analytics for both players
+- **Multiple Interfaces**: Choose between command-line or beautiful graphical interfaces
+- **Three AI Strategies**: Minimax, Alpha-Beta Pruning, and Alpha-Beta with Ordering
+- **Real-Time Analytics**: Track nodes expanded, generated, pruned, and time usage
+- **Configurable Difficulty**: Adjust time limits (1-3s) and search depth (5-9 plies)
+- **Full Checkers Rules**: King promotion, forced captures, and multiple jumps
+- **Performance Charts**: Visual analytics with matplotlib (Advanced GUI)
+- **Modern UI**: Beautiful dark theme with intuitive controls
+- **Move History**: Track and review all moves during the game
+- **Game Statistics**: Comprehensive analytics for both players
 
 ## Project Structure
 
@@ -28,13 +28,9 @@ miniproject2/
 │   ├── __init__.py
 │   └── search.py                  # SearchToolBox class
 ├── PlayingTheGame.py              # Game manager and main execution (CLI)
-├── CheckersGUI.py                 # 🎮 Standard GUI (Tkinter only)
-├── CheckersGUI_Advanced.py        # 🎮 Advanced GUI (with matplotlib charts)
-├── requirements_gui.txt           # Optional dependencies for Advanced GUI
-├── GUI_USER_GUIDE.md              # Comprehensive GUI user guide
-├── QUICK_REFERENCE.md             # Quick reference card for GUI
-├── BONUS_IMPLEMENTATION.md        # Documentation for 10% bonus implementation
-└── README.md                      # This file
+├── CheckersGUI_Advanced.py        # Advanced GUI (with matplotlib charts)
+├── requirements_gui.txt           # Dependencies for Advanced GUI
+└── README.md                      # This file (documentation)
 ```
 
 ## Classes Description
@@ -86,48 +82,37 @@ High-level game manager:
 
 ## How to Run
 
-### 🎮 Graphical User Interface (GUI) - **RECOMMENDED**
+### Graphical User Interface (GUI) - RECOMMENDED (+10% Bonus)
 
-#### Option 1: Standard GUI (Tkinter only)
-For a beautiful graphical interface with real-time analytics:
-```bash
-python CheckersGUI.py
-```
-
-**Features:**
-- 🎨 Beautiful, modern graphical board with gradient effects
-- 🖱️ Click-to-move interface (no typing coordinates!)
-- 📊 Real-time analytics dashboard
-- 📈 Visual statistics tracking
-- 📜 Move history with color coding
-- ⚙️ Easy configuration with sliders and radio buttons
-- 👑 Visual king representation with crowns
-
-#### Option 2: Advanced GUI with Charts (Requires matplotlib)
-For the ultimate experience with interactive analytics charts:
+**Advanced GUI with Analytics Charts:**
 ```bash
 python CheckersGUI_Advanced.py
 ```
 
-**Additional Features:**
-- 📊 **Interactive Analytics Charts** using matplotlib
+**Features:**
+- Beautiful, modern graphical board with enhanced 3D pieces
+- Click-to-move interface (no typing coordinates!)
+- **Interactive Analytics Charts** using matplotlib:
   - Nodes expanded per move (line chart)
   - Time per move (line chart)
   - Alpha-beta prunes per move (line chart)
   - Cumulative statistics comparison
-- 🎯 Tabbed interface (Game Board + Analytics Charts)
-- 🎨 Enhanced dark theme
-- 📈 Real-time chart updates after each move
-- 💡 Quick stats cards with emoji indicators
+- Tabbed interface (Game Board + Analytics Charts)
+- Real-time chart updates after each move
+- Quick stats cards with indicators
+- Move history with color coding
+- Easy configuration with sliders and radio buttons
+- Visual king representation with detailed crowns
+- Professional dark theme
 
-**Installation for Advanced GUI:**
+**Installation:**
 ```bash
 pip install matplotlib
 # or
 pip install -r requirements_gui.txt
 ```
 
-### 💻 Command-Line Interface
+### Command-Line Interface
 
 1. **Basic execution:**
 ```bash
@@ -186,9 +171,8 @@ The bot tracks and reports:
 - Python 3.7+
 - Standard library only (no external dependencies)
 
-### GUI Versions
-- **Standard GUI** (`CheckersGUI.py`): Python 3.7+ with Tkinter (included by default)
-- **Advanced GUI** (`CheckersGUI_Advanced.py`): Requires matplotlib
+### GUI Version
+- **Advanced GUI** (`CheckersGUI_Advanced.py`): Python 3.7+ with Tkinter (included) + matplotlib
   ```bash
   pip install matplotlib
   ```
@@ -225,35 +209,41 @@ Your move (start_row start_col target_row target_col): 5 0 4 1
 
 ## GUI Features & Screenshots
 
-### Standard GUI (CheckersGUI.py)
-The standard GUI provides a clean, modern interface with:
+### Advanced GUI (CheckersGUI_Advanced.py)
+The advanced GUI provides a professional, feature-rich interface:
+
+**Game Board Tab:**
 - **Interactive Board**: Click pieces to select, click destination to move
-- **Color-Coded Squares**: 
+- **Enhanced Graphics**: 
+  - 3D pieces with shadow effects and inner highlights
+  - Detailed gold crowns with jewel decorations for kings
   - Orange = selected piece
-  - Gold = legal move destinations
-  - Standard checkerboard pattern
-- **Piece Visualization**: White circles with black outlines, black circles with white outlines
-- **King Crowns**: Gold crowns appear on promoted pieces
-- **Configuration Panel**: Easy-to-use radio buttons and spinboxes
-- **Analytics Dashboard**: Real-time statistics for both players
+  - Gold = legal move destinations with green borders
+  - Brown-themed professional checkerboard pattern
+- **Configuration Panel**: 
+  - Slider controls for smooth time limit and ply depth adjustment
+  - Radio buttons for strategy selection
+  - Live value labels that update as you adjust settings
+- **Quick Stats Cards**: Large cards showing:
+  - Total Moves
+  - Nodes Explored
+  - Prunes (Agent)
+  - Avg Time/Move
 - **Move History**: Scrollable log of all moves with color coding
 - **Last Move Details**: Shows nodes expanded, generated, prunes, and time for agent's last move
 
-### Advanced GUI (CheckersGUI_Advanced.py)
-The advanced GUI includes everything from the standard GUI plus:
-- **Tabbed Interface**: Separate tabs for game board and analytics charts
+**Analytics Charts Tab:**
 - **Real-Time Charts**: Four matplotlib charts showing:
   1. Nodes expanded per move (line chart)
   2. Time taken per move (line chart)
   3. Alpha-beta prunes per move (line chart)
-  4. Cumulative statistics comparison
-- **Enhanced Dark Theme**: Professional dark theme with accent colors
-- **Quick Stats Cards**: Large, easy-to-read cards showing key metrics
-- **Animated Charts**: Charts update in real-time after each agent move
-- **Slider Controls**: Smooth sliders for time limit and ply depth configuration
+  4. Cumulative statistics comparison (multi-line chart)
+- **Professional Dark Theme**: Charts with dark backgrounds and accent colors
+- **Animated Updates**: Charts refresh in real-time after each agent move
+- **Visual Analysis**: Easily compare performance across different strategies
 
 ### How to Use the GUI
-1. Launch the GUI: `python CheckersGUI.py` or `python CheckersGUI_Advanced.py`
+1. Launch the GUI: `python CheckersGUI_Advanced.py`
 2. Configure your game settings:
    - Choose AI strategy (Minimax, Alpha-Beta, or Alpha-Beta with Ordering)
    - Set time limit (1-3 seconds)
@@ -265,36 +255,36 @@ The advanced GUI includes everything from the standard GUI plus:
    - Legal moves are highlighted in gold
 5. Watch the analytics update in real-time!
 
-## 🎯 Extra Credit - Graphical Interface (10% Bonus)
+## Extra Credit - Graphical Interface (10% Bonus)
 
-This project includes **TWO** complete graphical interfaces that go above and beyond the requirements:
+This project includes a **complete advanced graphical interface** that goes above and beyond the requirements:
 
-### 1. Standard GUI - Tkinter Implementation
-- ✅ Beautiful, modern UI using Python Tkinter
-- ✅ Full graphical board representation with custom-drawn pieces
-- ✅ Interactive click-to-move gameplay
-- ✅ Real-time analytics visualization
-- ✅ Professional color scheme and layout
-- ✅ Move history tracking
-- ✅ No external dependencies beyond standard Python
+### Advanced GUI - Tkinter + Matplotlib Implementation
+- **Beautiful, modern UI** with professional brown/gold theme
+- **Enhanced 3D graphics** with:
+  - Shadow effects on pieces
+  - Inner highlight circles for depth
+  - Detailed gold crowns with jewel decorations for kings
+  - Smooth gradient effects
+- **Interactive click-to-move gameplay** with visual feedback
+- **Four interactive analytics charts** using matplotlib:
+  - Nodes expanded per move (real-time tracking)
+  - Time per move (performance monitoring)
+  - Alpha-beta prunes per move (efficiency analysis)
+  - Cumulative statistics comparison (trend visualization)
+- **Tabbed interface** for better organization (Game Board + Charts)
+- **Quick stats dashboard** with indicator cards
+- **Slider controls** with live value updates
+- **Move history tracking** with color-coded entries
+- **Real-time chart updates** after each agent move
 
-### 2. Advanced GUI - Enhanced with Matplotlib
-- ✅ Everything from Standard GUI
-- ✅ **Four interactive analytics charts** showing:
-  - Performance metrics over time
-  - Comparative analysis
-  - Real-time updates
-- ✅ Tabbed interface for better organization
-- ✅ Professional dark theme
-- ✅ Enhanced user experience with sliders and visual feedback
+The GUI provides:
+- **Appealing graphical interface** for the game board with professional design
+- **Analytics generation and visualization** with interactive charts and statistics
+- **Modern UX design** with intuitive controls and visual feedback
+- **Educational value** by allowing users to see how different AI strategies perform through visual data
 
-Both implementations provide:
-- **Appealing graphical interface** for the game board
-- **Analytics generation and visualization** with charts and statistics
-- **Modern UX design** with intuitive controls
-- **Real-time feedback** and visual indicators
-
-The GUIs make the project more accessible, visually appealing, and educational by allowing users to see how different AI strategies perform through interactive charts and real-time statistics.
+The advanced GUI makes the project more accessible, visually appealing, and educational by transforming complex AI analytics into easy-to-understand visual representations.
 
 ## Notes
 
@@ -304,7 +294,7 @@ The GUIs make the project more accessible, visually appealing, and educational b
   - Center control bonus
 - Alpha-beta with ordering typically performs best
 - Higher ply depth makes the bot stronger but slower
-- The GUI versions make it much easier to understand the game flow and AI performance
-- Charts in the advanced GUI help visualize algorithm efficiency
+- The advanced GUI makes it much easier to understand the game flow and AI performance
+- Interactive charts help visualize algorithm efficiency and compare strategies
 
 "# Checkers-AI" 

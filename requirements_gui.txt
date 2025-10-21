@@ -4,3 +4,4 @@
 # For Advanced GUI with charts (CheckersGUI_Advanced.py):
 matplotlib>=3.5.0
 
+
